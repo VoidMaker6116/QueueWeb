@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Queue OOP Demo</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Queue (OOP + Flask)</h1>
+
+        <form action="/enqueue" method="POST">
+            <input type="text" name="value" placeholder="Enter value">
+            <button type="submit">Enqueue</button>
+        </form>
+
+        <button onclick="window.location.href='/dequeue'">Dequeue</button>
+        <button onclick="window.location.href='/clear'">Clear Queue</button>
+
+        <h3>Front element:</h3>
+        <p>
+            {% if front %}
+            {{ front }}
+            {% else %}
+            <i>Queue is empty</i>
+            {% endif %}
+        </p>
+
+        <h3>Queue:</h3>
+        <ul>
+            {% if queue %}
+            {% for item in queue %}
+            <li>{{ item }}</li>
+            {% endfor %}
+            {% else %}
+            <li><i>Empty</i></li>
+            {% endif %}
+        </ul>
+
+    </div>
+</body>
+
+</html>
