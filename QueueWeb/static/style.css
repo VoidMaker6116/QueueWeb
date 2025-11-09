@@ -1,11 +1,14 @@
+
 body {
     font-family: Arial, sans-serif;
     background-color: #e9eef2;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     padding-top: 50px;
+    margin: 0;
 }
+
 
 .container {
     background: #fff;
@@ -19,11 +22,42 @@ h1 {
     text-align: center;
 }
 
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    margin-bottom: 20px;
+}
+
+.nav-links a {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.nav-links a:hover {
+    background-color: #005fcc;
+}
+
 form {
     margin-bottom: 10px;
 }
 
-input {
+input[type="text"] {
     width: 65%;
     padding: 8px;
     margin-right: 6px;
@@ -39,6 +73,7 @@ button {
     background: #007bff;
     color: white;
     font-weight: bold;
+    margin-right: 5px;
 }
 
 button:hover {
@@ -57,7 +92,32 @@ ul li {
     padding: 6px 8px;
     background: white;
     margin-bottom: 6px;
-    border-radius: 5px;
     border-left: 4px solid #007bff;
     font-weight: bold;
+}
+
+
+ul.about-list {
+    background: none;           
+    padding-left: 20px;         
+    list-style-type: disc;      
+    border-radius: 0;           
+    min-height: auto;           
+}
+
+ul.about-list li {
+    background: none;           
+    border-left: none;          
+    font-weight: normal;        
+    margin-bottom: 4px;         
+}
+
+.profile-pic {
+    display: block;                
+    margin: 0 auto 15px auto;      
+    width: 120px;                  
+    height: 120px;
+    border-radius: 50%;            
+    object-fit: cover;             
+    border: 3px solid #20fc03;     
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rafael L. Pillejera</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/rafael.png') }}" 
+            alt="Rafael Profile Picture" class="profile-pic">
+
+        <h1 class="center-text">{{ rafael.name }}</h1>
+        <h5 class="center-text">{{ rafael.status }}</h5>
+        <h3 class="center-text"><strong>Age:</strong> {{ rafael.age }}</h3>
+        <h3 class="center-text"><strong>Bio:</strong> {{ rafael.bio }}</h3>
+
+        <h3 class="center-text">ABOUT ME:</h3>
+    <ul class ="about-list">
+        <li>Watching MCU movies and shows, reading Marvel comics, and following fan theories</li>
+        <li>Reading books and articles on philosophy, psychology, and social issues</li>
+        <li>Art and design appreciation, noticing patterns and creative visuals in spaces</li>
+        <li>Physical fitness: push-ups, jump rope, and maintaining a healthy lifestyle</li>
+        <li>Music listening and exploring different genres</li>
+        <li>Creative writing or journaling thoughts and reflections</li>
+        <li>Observing culture and history, like national heroes, events, and traditions</li>
+    </ul>
+
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/members">Members</a>
+        </div>
+    </div>
+</body>
+</html>

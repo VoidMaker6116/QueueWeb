@@ -34,5 +34,22 @@ def clear():
     queue = Queue()
     return redirect("/")
 
+@app.route("/members")
+def members():
+    return render_template("members.html")
+
+@app.route("/rafael")
+def rafael():
+    # Puwede kang magpadala ng data sa template
+    my_profile = {
+        "name": "Rafael L. Pillejera",
+        "age": 19,
+        "status": "Regular",
+        "bio": "hi phoe",
+        
+    }
+    return render_template("rafael.html", rafael=my_profile)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
